@@ -1,0 +1,76 @@
+{
+  "homePage": {
+    "title": "Home",
+    "header": "All Articles",
+    "tip": "Login first"
+  },
+  "navigation": {
+    "home": "Home",
+    "categories": "Categories",
+    "newPost": "New Post",
+    "settings": "Settings",
+    "reserved": "My Tech Blog. All rights reserved."
+  },
+  "categories": {
+    "title": "Categories",
+    "allCategories": "All Categories",
+    "articlesCount": "{count} articles"
+  },
+  "settings": {
+    "theme": "Theme",
+    "lan": "Language",
+    "logOut": "Log Out",
+    "logIn": "Log In",
+    "Logoutloading": "Logging In",
+    "loading": "Loading"
+  },
+  "blogDetails": {
+    "comments": "Post Comment",
+    "count": "{count} comments",
+    "placeholder": "writing down your comments...",
+    "sending": "sending...",
+    "tip": "No comments yet, be the first to comment!"
+  },
+  "newBlog": {
+    "title": "Title",
+    "time": "Reading time",
+    "date": "Date",
+    "author": "Author",
+    "tags": "Tags",
+    "link": "GitHub Link",
+    "upload": "Upload Image",
+    "contents": "Please enter content",
+    "btn": "Submit",
+    "inputTags": "Select or enter tags...",
+    "tagDescription": "Multiple selection available, press Enter or click to add after input/selection",
+    "saveBtn": "submit",
+    "saving": "submitting",
+    "updateBtn": "update",
+    "updating": "updatting"
+  },
+  "user": {
+    "user": "User",
+    "admin": "Admin Login",
+    "loginDescription": "Please enter your email and password to log in",
+    "email": "Email",
+    "placeholder": "Please enter {placeholder}",
+    "password": "Password",
+    "githubLogin": "Login with GitHub",
+    "githubAuthorize": "GitHub login is only available for authorized users",
+    "loginFail": "Login fail"
+  },
+  "message": {
+    "success": "Success",
+    "fail": "Failed",
+    "unauthorized": "You are not logged in",
+    "tologin": "Go to login",
+    "deleteConfirm": "Are you sure you want to delete? This action cannot be undone.",
+    "deleted": "Deleted"
+  },
+  "button": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  }
+}

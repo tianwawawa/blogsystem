@@ -1,0 +1,76 @@
+{
+  "homePage": {
+    "title": "首页",
+    "header": "所有文章",
+    "tip": "还没登录，请先登录"
+  },
+  "navigation": {
+    "home": "首页",
+    "categories": "分类",
+    "newPost": "新建博客",
+    "settings": "设置",
+    "reserved": "博客系统. 保留所有权利."
+  },
+  "categories": {
+    "title": "分类",
+    "allCategories": "所有分类",
+    "articlesCount": "共{count} 篇文章"
+  },
+  "settings": {
+    "theme": "主题",
+    "lan": "语言",
+    "logOut": "登出",
+    "logIn": "登录",
+    "Logoutloading": "登录中",
+    "loading": "加载中"
+  },
+  "blogDetails": {
+    "comments": "发表评论",
+    "count": "评论 {count}",
+    "placeholder": "写下你的评论...",
+    "sending": "发表中...",
+    "tip": "还没有评论，快来抢沙发吧"
+  },
+  "newBlog": {
+    "title": "标题",
+    "time": "阅读时间",
+    "date": "日期",
+    "author": "作者",
+    "tags": "标签",
+    "link": "github链接",
+    "upload": "上传图片",
+    "contents": "请输入正文",
+    "btn": "提交",
+    "inputTags": "选择或输入标签...",
+    "tagDescription": "可多选，输入或选择后回车/点击添加",
+    "saveBtn": "保存",
+    "saving": "保存中",
+    "updateBtn": "更新",
+    "updating": "更新中"
+  },
+  "user": {
+    "user": "用户",
+    "admin": "管理员登录",
+    "loginDescription": "请输入您的邮箱和密码登录系统",
+    "email": "邮箱",
+    "placeholder": "请输入 {placeholder}",
+    "password": " 密码",
+    "githubLogin": "使用 GitHub 登录",
+    "githubAuthorize": "仅限授权用户使用 GitHub 登录",
+    "loginFail": "登录失败"
+  },
+  "message": {
+    "success": "成功",
+    "fail": "失败",
+    "unauthorized": "你还没登录",
+    "tologin": "去登陆",
+    "deleteConfirm": "你确定要删除吗？此操作不可撤销。",
+    "deleted": "已删除"
+  },
+  "button": {
+    "edit": "编辑",
+    "delete": "删除",
+    "confirm": "确认",
+    "cancel": "取消"
+  }
+}
