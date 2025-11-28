@@ -55,8 +55,8 @@ export default function Navigation() {
   }, []);
 
   async function handleLogout() {
-    await logout();
     setEmail(null);
+    await logout();
   }
 
   return (
