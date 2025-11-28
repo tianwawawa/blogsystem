@@ -57,7 +57,8 @@
     "password": "Password",
     "githubLogin": "Login with GitHub",
     "githubAuthorize": "GitHub login is only available for authorized users",
-    "loginFail": "Login fail"
+    "loginFail": "Login fail",
+    "loading": "logging"
   },
   "message": {
     "success": "Success",

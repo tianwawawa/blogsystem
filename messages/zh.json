@@ -57,7 +57,8 @@
     "password": " 密码",
     "githubLogin": "使用 GitHub 登录",
     "githubAuthorize": "仅限授权用户使用 GitHub 登录",
-    "loginFail": "登录失败"
+    "loginFail": "登录失败",
+    "loading": "登录中"
   },
   "message": {
     "success": "成功",
