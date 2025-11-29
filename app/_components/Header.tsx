@@ -43,16 +43,16 @@ export default function Navigation() {
       setUserLocale(locale);
     });
   }
+  const refreshUser = async () => {
+    const supabase = createClient();
+    const { data, error } = await supabase.auth.getUser();
+    const user = data.user;
+    setEmail(user?.email ?? null);
+  };
+
   useEffect(() => {
-    const fetchUserData = async () => {
-      const supabase = createClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      setEmail(user?.email || '');
-    };
-    fetchUserData();
-  }, []);
+    !email && refreshUser();
+  });
 
   async function handleLogout() {
     setEmail(null);
