@@ -1,4 +1,3 @@
-// app/login/page.tsx
 import { LoginForm } from './loginForm';
 
 export default function LoginPage() {
