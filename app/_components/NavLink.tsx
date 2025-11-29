@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils'; // tailwind 合并类名工具
