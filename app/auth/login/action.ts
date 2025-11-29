@@ -1,4 +1,3 @@
-// app/auth/login/actions.ts
 'use server';
 
 import { createClient } from '@/lib/supabase/server';
@@ -30,12 +29,15 @@ export async function emailLogin(formData: LoginFormData) {
 }
 
 // app/auth/login/actions.ts
-export async function githubLogin() {
+export async function githubLogin(origin: string) {
   const supabase = await createClient();
 
   try {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
+      options: {
+        redirectTo: `${origin}/auth/callback`,
+      },
     });
 
     if (error) {

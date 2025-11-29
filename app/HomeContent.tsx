@@ -19,6 +19,5 @@ export default async function HomeAsync() {
     .from('posts')
     .select('*')
     .order('updated_at', { ascending: false });
-  console.log('data', data);
   return <PostList posts={data ?? []} heading={t('header')} />;
 }

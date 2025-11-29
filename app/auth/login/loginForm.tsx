@@ -52,7 +52,7 @@ export function LoginForm() {
   }
 
   async function signInWithGithub() {
-    const result = await githubLogin();
+    const result = await githubLogin(location.origin);
     if (result.succes) {
       // 如果成功，重定向到 GitHub 授权页面
       router.replace(result.data.url);

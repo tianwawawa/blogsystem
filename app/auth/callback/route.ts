@@ -3,7 +3,6 @@ import { createClient } from '@/lib/supabase/server';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  console.log('\nget方法调用===', request.nextUrl, request.url);
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get('code');
   const error = requestUrl.searchParams.get('error');
@@ -22,7 +21,9 @@ export async function GET(request: NextRequest) {
   const supabase = await createClient();
 
   try {
-    // 使用 code 交换 session
+    // 在服务端安全地交换code获取session
+    // 自动设置正确的cookies
+    // 建立完整的认证状态
     const { data, error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
 
     if (exchangeError) {
