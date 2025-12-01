@@ -16,11 +16,7 @@ export function ThemeToggle() {
         setTheme(theme === 'light' ? 'dark' : 'light');
       }}
     >
-      {theme === 'light' ? (
-        <Sun className="h-4 w-4" />
-      ) : theme === 'dark' ? (
-        <Moon className="h-4 w-4" />
-      ) : null}
+      {theme === 'dark' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
     </Button>
   );
 }

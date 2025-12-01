@@ -77,6 +77,7 @@ export default function Navigation() {
         <NavLink href="/">{tNav('home')}</NavLink>
         <NavLink href="/categories">{tNav('categories')}</NavLink>
         <NavLink href="/blog/edit/create">{tNav('newPost')}</NavLink>
+        <NavLink href="/donate">{tNav('donateContract')}</NavLink>
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Settings className="w-4 h-4" />
@@ -136,6 +137,10 @@ export default function Navigation() {
               <Link href="/blog/edit/create" className="text-lg font-medium">
                 {tNav('newPost')}
               </Link>
+              <Link href="/donate" className="text-lg font-medium">
+                {tNav('donateContract')}
+              </Link>
+
               {email ? (
                 <Button
                   onClick={handleLogout}

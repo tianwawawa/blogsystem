@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import BlogPagination from './Pagination';
 interface Post {
   id: string;
   title: string;
