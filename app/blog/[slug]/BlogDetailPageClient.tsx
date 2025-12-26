@@ -2,8 +2,8 @@
 import { format, parseISO } from 'date-fns';
 import EditAndDelete from '@/app/_components/EditAndDelete';
 import CommentsSection from '@/app/_components/CommentsSection';
-
-export default function BlogDetailPageClient({ post }: { post: any }) {
+import type { TableRow } from '@/interfaces/database.types';
+export default function BlogDetailPageClient({ post }: { post: TableRow<'posts'> }) {
   return (
     <div className="min-h-screen bg-gray-50 py-8 dark:bg-black">
       <article className="container mx-auto px-4 max-w-4xl">
