@@ -10,7 +10,7 @@ import TipTapEditor from './TipTapEditor';
 import { createClient } from '@/lib/supabase/client';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
-
+import type { Functions } from '@/interfaces/database.types';
 interface OptionType {
   value: string;
   label: string;
@@ -123,23 +123,23 @@ export default function BlogEditor({ blogParams }: { blogParams: string[] }) {
       const tagNames = formData.tags.map((t: OptionType) => t.label); // ['Web3','Rust']
       const postId = post.id || blogParam;
       // 3. 把标签名 → 分类 id（不存在则自动创建）
-      const { data: cats } = (await supabase
+      const { data: cats } = await supabase
         .from('categories')
         .select('id,name')
-        .in('name', tagNames)) as any;
-      const existIds = cats.map((c: any) => c.id);
-      const toCreate = tagNames.filter((n) => !cats.some((c: any) => c.name === n));
+        .in('name', tagNames);
+      const existIds = cats?.map(({ id }) => id) || [];
+      const toCreate = tagNames.filter((n) => !cats?.some(({ name }) => name === n));
       for (const name of toCreate) {
-        const { data: newCat } = (await supabase
+        const { data: newCat } = await supabase
           .from('categories')
           .insert({ name, slug: name.toLowerCase() })
           .select('id')
-          .single()) as any;
-        existIds.push(newCat.id);
+          .single();
+        existIds.push(newCat?.id);
       }
 
       // 4. 批量写入中间表
-      const rows = existIds.map((cId: any) => ({ post_id: postId, category_id: cId }));
+      const rows = existIds.map((cId: string) => ({ post_id: postId, category_id: cId }));
 
       await supabase.from('post_categories').insert(rows);
       toast.success(tMessage('success'));

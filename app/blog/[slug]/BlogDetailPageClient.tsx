@@ -29,7 +29,7 @@ export default function BlogDetailPageClient({ post }: { post: TableRow<'posts'>
           {/* 标签 */}
           <div className="flex flex-wrap justify-center gap-2">
             {post.tags &&
-              JSON.parse(post.tags).map(({ label, value }: any) => (
+              JSON.parse(post.tags).map(({ label, value }: { label: string; value: string }) => (
                 <span
                   key={label}
                   className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"

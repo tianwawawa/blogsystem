@@ -361,3 +361,5 @@ export const Constants = {
 
 export type TableRow<TableName extends keyof DefaultSchema['Tables']> =
   DefaultSchema['Tables'][TableName]['Row'];
+export type Functions<Key extends keyof DefaultSchema['Functions']> =
+  DefaultSchema['Functions'][Key];
