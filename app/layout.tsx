@@ -3,6 +3,7 @@ import { Geist } from 'next/font/google';
 import './globals.css';
 import AppShell from '@/app/_components/AppShell';
 import { useLocale, useTranslations } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import { NextIntlClientProvider } from 'next-intl';
 import { Toaster } from '@/components/ui/sonner';
@@ -29,13 +30,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const currentLocale = useLocale();
+  const locale = useLocale();
   const t = useTranslations('navigation');
   return (
-    <html lang={currentLocale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
         <AppShell>
-          <NextIntlClientProvider>
+          <NextIntlClientProvider locale={locale}>
             <Toaster position="top-right" swipeDirections={['top']} />
             <NextTopLoader color="#508ff4ff" height={3} showSpinner={false} />
             <ThemeProvider

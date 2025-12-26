@@ -26,6 +26,7 @@ import {
 import { setUserLocale } from '@/lib/locale';
 import { Locale } from '@/i18n/config';
 import { useTranslations, useLocale } from 'next-intl';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -97,6 +98,9 @@ export default function Navigation() {
                   <SelectItem value="en">English</SelectItem>
                 </SelectContent>
               </Select>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <ConnectButton />
             </DropdownMenuItem>
             <Separator className="my-2" />
             {email ? (
